@@ -1,2 +1,176 @@
 # portfolio
 My personal portfolio website (HTML, CSS &amp; JS)
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tania — Portfolio</title>
+  <meta name="description" content="Tania — front-end developer. Portfolio." />
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav aria-label="Main navigation">
+        <div class="logo">
+          <div class="logo-mark" aria-hidden="true">T</div>
+          <div>
+            <div class="name">Tania</div>
+            <small class="role">Developer · Designer</small>
+          </div>
+        </div>
+
+        <div class="nav-links" role="navigation" aria-label="Primary">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="controls">
+          <button class="btn" id="darkToggle" aria-pressed="false" title="Toggle dark mode">🌙</button>
+          <button class="btn mobile-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" title="Open menu">☰</button>
+        </div>
+      </nav>
+    </header>
+
+    <div id="mobileMenu" role="menu" aria-hidden="true" class="mobile-menu">
+      <div class="card mobile-card">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <main id="hero" class="hero">
+      <div class="hero-left">
+        <h1 class="hero-title">Hi — I'm <span class="accent-text">Tania</span></h1>
+        <p class="hero-sub">I build modern, accessible web experiences and delightful interfaces.</p>
+        <div class="cta-row">
+          <button class="primary-cta" id="contactCTA">Contact Me</button>
+          <a class="btn" href="#projects">See projects →</a>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Available for hire</span>
+          <span class="muted">· Based in Pakistan</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Replace src with "avatar.jpg" (local) or a direct image URL -->
+        <img src="🖤🖤🖤.jpeg" alt="Tania portrait" class="avatar" id="profileImg" />
+      </div>
+    </main>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div>
+          <p>Hi, I’m Tania — a front-end developer focused on responsive design and accessible interfaces.</p>
+          <p class="muted">I enjoy learning new tools, collaborating with teams, and shipping polished front-end code.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>Years experience</strong><span class="muted">4+</span></div>
+          <div class="fact"><strong>Projects shipped</strong><span class="muted">12</span></div>
+          <div class="fact"><strong>Focus</strong><span class="muted">Web Apps · UI</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project card" tabindex="0" role="button"
+                 data-title="Minimal Dashboard"
+                 data-desc="A responsive analytics dashboard with charts and realtime data."
+                 data-img="https://images.unsplash.com/photo-1506765515384-028b60a970df?q=80&w=1400&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?q=80&w=1400&auto=format&fit=crop" alt="Dashboard screenshot" />
+          <div class="meta">
+            <strong>Minimal Dashboard</strong>
+            <div class="muted small">Analytics dashboard • React • Charts</div>
+          </div>
+        </article>
+
+        <article class="project card" tabindex="0" role="button"
+                 data-title="E-commerce UI"
+                 data-desc="High-performance shop UI with accessibility-first forms and checkout flow."
+                 data-img="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1400&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1400&auto=format&fit=crop" alt="Ecommerce screenshot" />
+          <div class="meta">
+            <strong>E-commerce UI</strong>
+            <div class="muted small">Performance focused • Accessible</div>
+          </div>
+        </article>
+
+        <article class="project card" tabindex="0" role="button"
+                 data-title="Portfolio CMS"
+                 data-desc="Headless portfolio with markdown editing and preview."
+                 data-img="https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=1400&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=1400&auto=format&fit=crop" alt="CMS screenshot" />
+          <div class="meta">
+            <strong>Portfolio CMS</strong>
+            <div class="muted small">Headless • Markdown • Netlify</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill"><div class="label"><span>HTML / CSS</span><span class="muted">92%</span></div><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+        <div class="skill"><div class="label"><span>JavaScript</span><span class="muted">88%</span></div><div class="bar"><div class="fill" style="width:88%"></div></div></div>
+        <div class="skill"><div class="label"><span>React</span><span class="muted">75%</span></div><div class="bar"><div class="fill" style="width:75%"></div></div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <form id="contactForm" novalidate>
+        <div class="row">
+          <div class="col"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required></div>
+          <div class="col"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="taniaatahirr@gmail.com" required></div>
+        </div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Hi! I’d like to work with you..." required></textarea>
+        <div class="form-row">
+          <button type="submit" class="primary-cta">Send message</button>
+          <div id="formStatus" class="muted">I typically reply within 2 business days.</div>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="socials">
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+      <div class="muted">&copy; <span id="year"></span> Tania. All rights reserved.</div>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <h3 id="modalTitle">Project Title</h3>
+        <button class="btn" id="modalClose" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="Project image" />
+        <div>
+          <p id="modalDesc"></p>
+          <div style="margin-top:12px"><a href="#" class="chip">View live</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
